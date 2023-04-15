@@ -15,9 +15,8 @@
     text-transform: capitalize;
     transition: all 0.2s linear;
 }
-
 *::selection{
-    background-color: var(--yellow);
+    background-color: ver(--yellow);
     color:#333;
 }
 html{
@@ -44,33 +43,16 @@ section{
     padding:1rem;
 }
 
-.btn{
-    width: 25rem;
-    padding:.7rem 3rem;
-    background:var(--green);
-    color:#fff;
-    font-weight: 600;
-    cursor: pointer;
-    margin-top:1rem;
-    font-size:2rem;
-    border-radius:5rem;
-}
-.btn i{
-    padding:0 0.5rem;
-    font-size:1.8rem;
-}
-.btn:active{
-    background: rgb(211, 211, 11);
-    transition: none;
-}
 .links{
     display: flex;
     font-size: 3rem;
 }
 .links li {
     list-style-type: none;
-    text-decoration: none;
     padding:1.4rem 2rem;
+}
+.links li a{
+    text-decoration: none;
 }
 .links li i{
     color:#fff;
@@ -78,12 +60,15 @@ section{
     padding:8px;
     border-radius: 50%;
 }
-.links li i:hover{
+.links li a i:hover{
+    border-radius: 50%;
     background-color:var(--green);
 }
-.links li i:active{
+.links li a i:active{
     background-color:rgb(197, 197, 11);
 }
+
+
 .heading{
     text-align: center;
     margin:0 6rem;
@@ -108,6 +93,7 @@ header{
     text-align: center;
 }
 header .user img{
+    margin-top: 1.3rem;
     height:17rem;
     width: 17rem;
     border-radius: 50%;
@@ -186,8 +172,8 @@ h1 span{
 .home .home1{
     display: flex;
     justify-content: center;
-    flex-flow:column;
-    padding: 0 15rem;
+    flex-direction: column;
+    padding:0 10rem;
 }
 .home .home1 h3{
     font-size:2.5rem;
@@ -200,6 +186,7 @@ h1 span{
 .home .home1 p{
     font-size:2rem;
     color:#eee;
+    text-indent: 1rem;
     text-transform: none;
     text-overflow: clip;
     padding:1rem 0;
@@ -212,11 +199,34 @@ h1 span{
     flex-wrap: wrap;
 }
 .home .home1 .buttons{
-    padding-top:3rem;
+    margin-top: 10px;
+    padding:10px;
+    width:500px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
 }
-.home .home1 .buttons a{
-    padding-right: 20px;
+.home .home1 .buttons li{   
+    list-style-type: none;
+    width:220px;
+    padding:7px 20px;
+    text-align: center;
+    border-radius: 5rem;
+    background: var(--green);
 }
+.home .home1 .buttons li a{
+   
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 600;
+    color:#fff;
+}
+.home .home1 .buttons li:active{
+    background-color:yellow;
+}
+
+
+
 
 
 .about .row .info {
@@ -262,9 +272,8 @@ h1 span{
 
 .about .skills .row li :hover{
     border-radius: 1.2rem;
-    transition: none;
-    background: #fff;
-    
+    transform: scale(1.1);
+    background-color: #fff;  
  }
 
 
@@ -279,18 +288,21 @@ h1 span{
  .projects .row .box {
     padding-top:20px;
     border-radius: 2rem; 
-    background-color:#1d1c1c;
+    background-color:#222;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
  }
+ 
  .projects .row .box img{
-    width:90%;
-    height:90%;
-    object-fit: contain;
+    width:380px;
+    height:230px;
+    overflow: hidden;
+    border-radius: .8rem;
+    box-shadow:6px 6px 18px black;
     align-content: center;
-    padding-bottom: 10px;
+    padding-bottom: 1px;
  }
  .projects .row .list{
     width:80%;
@@ -340,7 +352,7 @@ h1 span{
     border-radius: 5rem;
     padding:1rem .4rem;
     margin: 2rem;
-    background: #444;
+    background-color: #444;
     text-align: center;
 }
 .coding_profile .profile li a{
@@ -474,33 +486,72 @@ h1 span{
     body{
         border:5px groove white;
         margin: 8px;
-        font-size: 50%;
+        font-size: 40%;
+    }
+    header .navbar ul li a:active{
+        background-color:none;
+    }
+    .home .home1 .buttons li:hover{
+        background-color:yellow;
     }
     .home .home-img-container{
         margin-top: 50px;
         margin-bottom: 20px;
         display: block;
     }
+    .home{
+        padding:1rem 2rem;
+    }
     .home .home1{
-        padding:2rem;
+        padding:1px 1rem;
     }
     .home .home1 h1{
-        font-size: 4.5rem;
+        font-size: 3rem;
     }
     .home .home1 p,h3{
         font-size: 2rem;
+        text-align: justify;
+    }
+    .home .home1 h1{
+        padding-left:30px;
+    }
+    .home .home1 h3{
+        padding-left: 3px;
+    }
+    .home .home1 .buttons{
+        width:auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .home .home1 .buttons li{
+        margin-bottom: 10px;
     }
     header{
         width:100vw;
         border:5px solid grey;
-        padding:20px;
+        padding: 20px;
+    }
+    header .user{
+        padding-top:20px;
+        margin-bottom: -1rem;
     }
     .about p{
-        line-height: 3rem;
+        line-height: 2.9rem;
         letter-spacing: none;
+    }
+    .projects .row .box img{
+        width:280px;
+        height:130px;
     }
     .heading{
         margin:0 .3rem;
+    }
+    .coding_profile .profile{
+        margin-top:20px;
+    }
+    .coding_profile .profile li{
+        font-weight: 500;
     }
     .about .row  .counter .box {
         width:100%;
@@ -508,9 +559,9 @@ h1 span{
     .education .box-container .box {
         width:100%;
     }
-    
-    .buttons{
-        text-align: center;
+    .about .row .info{
+        padding:2rem;
+        text-indent: 3rem;
     }
     .about .skills .row{
         gap:-1.5rem;
@@ -526,5 +577,4 @@ h1 span{
         height:9.5rem;
         transition: 0.1s linear;
     }
-   
  }
