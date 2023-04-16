@@ -34,7 +34,7 @@ html::-webkit-scrollbar-thumb{
     background:var(--yellow);
 }
 body{
-    background: #1f242d;
+    background: #111;
     overflow-x:hidden;
     padding-left:35rem;
 }
