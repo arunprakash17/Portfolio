@@ -477,6 +477,9 @@ footer .cpy p{
         margin: 8px;
         font-size: 40%;
     }
+    section{
+        min-height:50vh;
+    }
     header .navbar ul li a:active{
         background-color:none;
     }
