@@ -102,7 +102,8 @@ header .user img{
     border:.7rem solid var(--yellow);
 }
 header .user .name{
-    font-size:3.5rem;
+    font-size:3rem;
+    letter-spacing: 2px;
     color:rgb(233, 137, 12);
 }
 header .user .post{
@@ -315,29 +316,42 @@ h1 span{
     font-size: 3rem;
     text-align: center;
     color:rgb(168, 8, 88);
-    padding:5px;
+    padding:20px auto;
+    margin-top: 4px;
     border-radius: 1rem;
  }
-.projects .row .list .pro-details{
+.projects .row .list .line {
+    width:100%;
     display: flex;
     justify-content: space-between;
+} 
+.projects .row .list .line .pro-details{
+    width:90%;
+    display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
     padding:10px;
 }
-.projects .row .list .pro-details li{
+.projects .row .list .line .pro-details li{
     color:#fff;
     font-size: 1.5rem;
-    padding:4px 10px;
+    padding:5px 10px;
     list-style: none;
     background-color: rgb(10, 63, 131);
-    border-radius: 2rem;
+    border-radius: 1rem;
 }
 .link{
-    background-color: #beb206;
+    width:10%;
     font-size: 2rem;
-    border-radius: 2rem;
-    padding:3px 5px;
-    color:#eee;
+}
+.link a {
+    float: right;
+    margin-top: 7px;
+    text-decoration:none;
+    padding:2px 5px;
+    border-radius: 1rem;
+    color:black;
+    background-color: white;
 }
 
 /* -------------------------------------coding profile    ===========> start <============ --------------*/
@@ -352,15 +366,16 @@ h1 span{
 .coding_profile .profile li{
     flex:1 1 25rem;
     list-style: none;
-    border-radius: 5rem;
-    padding:1rem .4rem;
     margin: 2rem;
     background-color: #444;
+    border-radius: 5rem;
+    padding:1rem .4rem;
     text-align: center;
 }
 .coding_profile .profile li a{
     text-decoration: none;
     font-weight: 550;
+
 }
 .coding_profile .profile li a span{
    color:#fff;
@@ -421,6 +436,7 @@ footer{
     font-weight: bolder;
     text-align: center;
     align-items: center;
+    background-color: #222;
 }
 footer .cpy{
     display: grid;
@@ -478,7 +494,7 @@ footer .cpy p{
         font-size: 40%;
     }
     section{
-        min-height:50vh;
+        min-height:40vh;
     }
     header .navbar ul li a:active{
         background-color:none;
@@ -558,6 +574,9 @@ footer .cpy p{
     }
     .about .row .info p{
        letter-spacing:.8px;
+    }
+    .about .row .contact .info i{
+        padding-right:1rem;
     }
     .skills .row{
         gap:-1.5rem;
